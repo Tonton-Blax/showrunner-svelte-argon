@@ -12,11 +12,11 @@ export const token = derived(
     $user => $user.token || null
 );
 
-export async function getUserInfo() {
+export async function getUserInfo(user) {
     const response = await fetch("/.auth/me");
     const payload = await response.json();
     const { clientPrincipal } = payload;
-    this.$user.clientPrincipal = clientPrincipal;
+    user.clientPrincipal = clientPrincipal;
 }
 
 export async function getToken() {

@@ -5,7 +5,8 @@
   import SideBar from "../../components/SidebarPlugin/SideBar.svelte";
   import SideBarItem from "../../components/SidebarPlugin/SideBarItem.svelte";
   export let type = "default";
-  import { Route } from "svelte-router-spa";
+    import { Route } from "svelte-router-spa";
+
   import { onMount } from "svelte";
 
   import {user, userId, token, getToken, getUserInfo} from "../../stores/auth";
@@ -16,7 +17,7 @@
 
   console.log("before user:",$user)
     if($userId == null ) {
-      getUserInfo();
+      getUserInfo($user);
     }
 
   console.log("after user:",$user)
