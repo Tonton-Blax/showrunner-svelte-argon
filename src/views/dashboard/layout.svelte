@@ -7,9 +7,21 @@
   export let type = "default";
   import { Route } from "svelte-router-spa";
   import { onMount } from "svelte";
+
+  import {user, userId, token, getToken, getUserInfo} from "../../stores/auth";
   export let currentRoute;
   let toggle = false;
   let sideBarToggle = true;
+  onMount(function() {  
+
+  console.log("before user:",$user)
+    if($userId == null ) {
+      getUserInfo();
+    }
+
+  console.log("after user:",$user)
+  });
+
 
   function changeToggle() {
     if (document.body.classList.contains("g-sidenav-hidden")) {
