@@ -17,6 +17,8 @@
 
   console.log("before user:",$user)
     if($userId == null ) {
+
+    console.log("getting user")
       getUserInfo($user);
     }
 

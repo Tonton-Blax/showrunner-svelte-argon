@@ -7,13 +7,15 @@
   let pageTransitionDuration = 200;
   let year = new Date().getFullYear();
   export let noBodyBackground;
+  export let currentRoute;
+  export let params;
+
   import { Route } from "svelte-router-spa";
 
 
   import { onMount } from "svelte";
 
   import {user, userId, token, getToken, getUserInfo} from "../../stores/auth";
-  export let currentRoute;
   onMount(function() {  
 
   if($userId == null ) {

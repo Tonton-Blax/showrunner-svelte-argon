@@ -27,6 +27,7 @@
   import SvelteFC, { fcRoot } from "svelte-fusioncharts";
   fcRoot(FusionCharts, Charts, FusionTheme, CandyTheme);
   export let name = "Dashboard";
+  export let currentRoute;
   import { onMount } from "svelte";
   onMount(function() {
     let topmenu = document.getElementsByTagName("nav").item(0);
@@ -442,7 +443,7 @@
                   alt="Image placeholder" />
               </div>
               <div class="col-auto">
-                <Badge suze="lg" variant="success">Active</Badge>
+                <Badge size="lg" variant="success">Active</Badge>
               </div>
             </div>
             <div class="my-4">
