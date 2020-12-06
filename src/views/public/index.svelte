@@ -5,6 +5,8 @@
   document.body.classList = "";
   import { fade, scale } from "svelte/transition";
   import {user, userId, token} from "../../stores/auth";
+  export let currentRoute;
+  export let params;
 
   console.log("user:",$user)
 </script>
