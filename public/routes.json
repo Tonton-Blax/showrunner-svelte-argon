@@ -37,6 +37,11 @@
         {
             "route": "/logout",
             "serve": "/.auth/logout"
+        },
+        {
+            "route": "/*",
+            "serve": "/index.html",
+            "statusCode": 200
         }
     ],
     "platformErrorOverrides": [
