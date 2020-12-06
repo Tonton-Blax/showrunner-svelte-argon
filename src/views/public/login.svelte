@@ -47,13 +47,13 @@
               <small>Sign in with</small>
             </div>
             <div class="btn-wrapper text-center">
-              <a href="/login/github" class="btn btn-neutral btn-icon">
+              <a href="/login/github?post_login_redirect_uri=/dashboard/pages/user" class="btn btn-neutral btn-icon">
                 <span class="btn-inner--icon">
                   <img src="img/icons/common/github.svg" alt="" />
                 </span>
                 <span class="btn-inner--text">Github</span>
               </a>
-              <a href="/login/google" class="btn btn-neutral btn-icon">
+              <a href="/login/google?post_login_redirect_uri=/dashboard/pages/user" class="btn btn-neutral btn-icon">
                 <span class="btn-inner--icon">
                   <img src="img/icons/common/google.svg" alt="" />
                 </span>
