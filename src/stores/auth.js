@@ -16,7 +16,7 @@ export async function getUserInfo() {
     const response = await fetch("/.auth/me");
     const payload = await response.json();
     const { clientPrincipal } = payload;
-    $user.clientPrincipal = clientPrincipal;
+    this.$user.clientPrincipal = clientPrincipal;
 }
 
 export async function getToken() {
@@ -24,5 +24,5 @@ export async function getToken() {
     const payload = await response.json();
     const { token } = payload;
     console.log(token);
-    $user.token = token;
+    this.$user.token = token;
 }
