@@ -16,13 +16,8 @@
   let sideBarToggle = true;
   onMount(function() {  
 
-  console.log("userid:",$userId)
-
-  console.log("userid == null:",$userId==null)
-
-  console.log("userid === null:",$userId===null)
   console.log("before user:",$user)
-    if($userId == null ) {
+    if($user == null ) {
 
     console.log("getting user")
       getUserInfo($user);
