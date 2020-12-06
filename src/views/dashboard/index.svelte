@@ -27,7 +27,8 @@
   import SvelteFC, { fcRoot } from "svelte-fusioncharts";
   fcRoot(FusionCharts, Charts, FusionTheme, CandyTheme);
   export let name = "Dashboard";
-  export let currentRoute;
+  export let currentRoute; 
+  export let params;
   import { onMount } from "svelte";
   onMount(function() {
     let topmenu = document.getElementsByTagName("nav").item(0);

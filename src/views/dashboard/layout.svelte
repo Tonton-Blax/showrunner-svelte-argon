@@ -11,6 +11,7 @@
 
   import {user, userId, token, getToken, getUserInfo} from "../../stores/auth";
   export let currentRoute;
+  export let params;
   let toggle = false;
   let sideBarToggle = true;
   onMount(function() {  
