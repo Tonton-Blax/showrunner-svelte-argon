@@ -35,6 +35,9 @@ import VectorMaps from "./views/dashboard/Maps/vectorMaps.svelte";
 //calendar
 import Calendar from "./views/dashboard/calendar.svelte";
 
+// add guard here!
+
+
 //404 page
 import NotFoundPage from "./views/dashboard/NotFoundPage.svelte";
 const routes = [{
