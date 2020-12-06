@@ -9,6 +9,9 @@
   export let noBodyBackground;
   import { Route } from "svelte-router-spa";
 
+
+  import { onMount } from "svelte";
+
   import {user, userId, token, getToken, getUserInfo} from "../../stores/auth";
   export let currentRoute;
   onMount(function() {  
