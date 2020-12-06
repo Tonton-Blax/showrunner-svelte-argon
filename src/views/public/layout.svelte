@@ -8,7 +8,17 @@
   let year = new Date().getFullYear();
   export let noBodyBackground;
   import { Route } from "svelte-router-spa";
+
+  import {user, userId, token, getToken, getUserInfo} from "../../stores/auth";
   export let currentRoute;
+  onMount(function() {  
+
+  if($userId == null ) {
+    getUserInfo($user);
+  }
+
+});
+
 
   updateBackground();
 
