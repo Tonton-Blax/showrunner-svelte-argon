@@ -47,13 +47,13 @@
               <small>Sign in with</small>
             </div>
             <div class="btn-wrapper text-center">
-              <a href="/" class="btn btn-neutral btn-icon">
+              <a href="/login/github" class="btn btn-neutral btn-icon">
                 <span class="btn-inner--icon">
                   <img src="img/icons/common/github.svg" alt="" />
                 </span>
                 <span class="btn-inner--text">Github</span>
               </a>
-              <a href="/" class="btn btn-neutral btn-icon">
+              <a href="/login/google" class="btn btn-neutral btn-icon">
                 <span class="btn-inner--icon">
                   <img src="img/icons/common/google.svg" alt="" />
                 </span>
@@ -61,47 +61,7 @@
               </a>
             </div>
           </div>
-          <div class="card-body px-lg-5 py-lg-5">
-            <div class="text-center text-muted mb-4">
-              <small>Or sign in with credentials</small>
-            </div>
-            <form role="form">
-              <BaseInput
-                alternative
-                class="mb-3"
-                name="Email"
-                prependIcon="ni ni-email-83"
-                placeholder="Email"
-                required />
-              <BaseInput
-                alternative
-                class="mb-3"
-                name="Password"
-                prependIcon="ni ni-lock-circle-open"
-                type="password"
-                placeholder="Password"
-                required />
-              <BaseCheckbox model="rememberMe">Remember me</BaseCheckbox>
-              <div class="text-center">
-                <BaseButton type="primary" nativeType="submit" className="my-4">
-                  Sign in
-                </BaseButton>
-              </div>
-            </form>
-          </div>
         </Card>
-        <div class="row mt-3">
-          <div class="col-6">
-            <a href="/dashboard" class="text-light">
-              <small>Forgot password?</small>
-            </a>
-          </div>
-          <div class="col-6 text-right">
-            <a href="/register" class="text-light">
-              <small>Create a new account</small>
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
