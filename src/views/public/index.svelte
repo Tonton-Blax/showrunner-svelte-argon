@@ -4,14 +4,16 @@
   import SvelteTooltip from "svelte-tooltip";
   document.body.classList = "";
   import { fade, scale } from "svelte/transition";
-  import {user, userId, token} from "../../stores/auth";
   export let currentRoute;
   export let params;
 
-  console.log("user:",$user)
+  console.log(_showrunner.env.isProd);
 </script>
 
-<div class="main-content" in:scale={{ y: 200, duration: 500 }} out:scale={{ y: 200, duration: 100 }}>
+<div
+  class="main-content"
+  in:scale={{ y: 200, duration: 500 }}
+  out:scale={{ y: 200, duration: 100 }}>
   <div style="">
     <div class="header bg-danger pt-7 pb-7">
       <div class="container">
@@ -182,20 +184,27 @@
                 </Card>
               </div>
               <div class="col-lg-4">
-              <Card noBody className="card card-lift--hover shadow border-0">
-                <div class="card-body py-5">
-                  <div class="icon icon-shape bg-gradient-warning text-white rounded-circle mb-4">
-                      <i class="ni ni-planet"></i>
+                <Card noBody className="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                    <div
+                      class="icon icon-shape bg-gradient-warning text-white rounded-circle mb-4">
+                      <i class="ni ni-planet" />
                     </div>
-                    <h4 class="h3 text-warning text-uppercase">FULL SASS SUPPORT</h4>
-                    <p class="description mt-3">Argon makes customization easier than ever before. You get all the tools to make your website building process a breeze.</p>
+                    <h4 class="h3 text-warning text-uppercase">
+                      FULL SASS SUPPORT
+                    </h4>
+                    <p class="description mt-3">
+                      Argon makes customization easier than ever before. You get
+                      all the tools to make your website building process a
+                      breeze.
+                    </p>
                     <div>
                       <Badge pill={true} variant="warning">sass</Badge>
                       <Badge pill={true} variant="warning">design</Badge>
                       <Badge pill={true} variant="warning">customize</Badge>
                     </div>
-                </div>
-              </Card>
+                  </div>
+                </Card>
               </div>
             </div>
           </div>
@@ -400,108 +409,129 @@
               </h4>
               <div class="row justify-content-center overflow-hidden">
                 <div class="my-2 col-md-2 col-3" style="color: #fff;">
-                <SvelteTooltip tip="Svelte - Cybernetically enhanced web apps" top color="#000">
-                  <a
-                    href="https://www.creative-tim.com/product/argon-dashboard-pro-svelte?ref=adpsvelte-index-page"
-                    target="_blank"
-                    class="el-tooltip"
-                    aria-describedby="el-tooltip-9512"
-                    tabindex="0">
-                    <img
-                      alt=""
-                      src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
-                      class="shadow shadow-lg--hover img-fluid rounded-circle" />
-                  </a>
+                  <SvelteTooltip
+                    tip="Svelte - Cybernetically enhanced web apps"
+                    top
+                    color="#000">
+                    <a
+                      href="https://www.creative-tim.com/product/argon-dashboard-pro-svelte?ref=adpsvelte-index-page"
+                      target="_blank"
+                      class="el-tooltip"
+                      aria-describedby="el-tooltip-9512"
+                      tabindex="0">
+                      <img
+                        alt=""
+                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
+                        class="shadow shadow-lg--hover img-fluid rounded-circle" />
+                    </a>
                   </SvelteTooltip>
                 </div>
                 <div class="my-2 col-md-2 col-3" style="color: #fff;">
-                <SvelteTooltip tip="Bootstrap 4 - Most popular fron-end component library" top color="#000">
-                  <a
-                    href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=adpsvelte-index-page"
-                    target="_blank"
-                    class="el-tooltip"
-                    aria-describedby="el-tooltip-9512"
-                    tabindex="0">
-                    <img
-                      alt=""
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg"
-                      class="shadow shadow-lg--hover img-fluid rounded-circle" />
-                  </a>
-                  </SvelteTooltip>
-                </div>
-                <div class="my-2 col-md-2 col-3"  style="color: #fff;">
-                <SvelteTooltip tip="Vue.js - The progressive javascript framework" top color="#000">
-                  <a
-                    href="https://www.creative-tim.com/product/vue-argon-dashboard-pro?ref=adpsvelte-index-page"
-                    target="_blank"
-                    class="el-tooltip"
-                    aria-describedby="el-tooltip-4193"
-                    tabindex="0">
-                    <img
-                      alt=""
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
-                      class="img-fluid rounded-circle" />
-                  </a>
+                  <SvelteTooltip
+                    tip="Bootstrap 4 - Most popular fron-end component library"
+                    top
+                    color="#000">
+                    <a
+                      href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=adpsvelte-index-page"
+                      target="_blank"
+                      class="el-tooltip"
+                      aria-describedby="el-tooltip-9512"
+                      tabindex="0">
+                      <img
+                        alt=""
+                        src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg"
+                        class="shadow shadow-lg--hover img-fluid rounded-circle" />
+                    </a>
                   </SvelteTooltip>
                 </div>
                 <div class="my-2 col-md-2 col-3" style="color: #fff;">
-                <SvelteTooltip tip="Sketch - Digital design toolkit" top color="#000">
-                  <a
-                    href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=adpsvelte-index-page"
-                    target="_blank"
-                    class="el-tooltip"
-                    aria-describedby="el-tooltip-9075"
-                    tabindex="0">
-                    <img
-                      alt=""
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
-                      class="img-fluid rounded-circle" />
-                  </a>
+                  <SvelteTooltip
+                    tip="Vue.js - The progressive javascript framework"
+                    top
+                    color="#000">
+                    <a
+                      href="https://www.creative-tim.com/product/vue-argon-dashboard-pro?ref=adpsvelte-index-page"
+                      target="_blank"
+                      class="el-tooltip"
+                      aria-describedby="el-tooltip-4193"
+                      tabindex="0">
+                      <img
+                        alt=""
+                        src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
+                        class="img-fluid rounded-circle" />
+                    </a>
                   </SvelteTooltip>
                 </div>
                 <div class="my-2 col-md-2 col-3" style="color: #fff;">
-                  <SvelteTooltip tip="[Coming Soon] Adope Photoshop - Software for digital images manipulation" top color="#000">
-                  <a
-                    href=" https://www.adobe.com/products/photoshop.html"
-                    target="_blank"
-                    class="el-tooltip"
-                    aria-describedby="el-tooltip-7637"
-                    tabindex="0">
-                    <img
-                      alt=""
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg"
-                      class="opacity-3 img-fluid rounded-circle" />
-                  </a>
+                  <SvelteTooltip
+                    tip="Sketch - Digital design toolkit"
+                    top
+                    color="#000">
+                    <a
+                      href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=adpsvelte-index-page"
+                      target="_blank"
+                      class="el-tooltip"
+                      aria-describedby="el-tooltip-9075"
+                      tabindex="0">
+                      <img
+                        alt=""
+                        src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
+                        class="img-fluid rounded-circle" />
+                    </a>
                   </SvelteTooltip>
                 </div>
                 <div class="my-2 col-md-2 col-3" style="color: #fff;">
-                <SvelteTooltip tip="Angular - One framework, Mobile" top color="#000">
-                  <a
-                    href="https://www.creative-tim.com/product/argon-dashboard-pro-angular?ref=adpsvelte-index-page"
-                    target="_blank"
-                    class="el-tooltip"
-                    aria-describedby="el-tooltip-1520"
-                    tabindex="0">
-                    <img
-                      alt=""
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
-                      class="img-fluid rounded-circle" />
-                  </a>
+                  <SvelteTooltip
+                    tip="[Coming Soon] Adope Photoshop - Software for digital images manipulation"
+                    top
+                    color="#000">
+                    <a
+                      href=" https://www.adobe.com/products/photoshop.html"
+                      target="_blank"
+                      class="el-tooltip"
+                      aria-describedby="el-tooltip-7637"
+                      tabindex="0">
+                      <img
+                        alt=""
+                        src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg"
+                        class="opacity-3 img-fluid rounded-circle" />
+                    </a>
                   </SvelteTooltip>
                 </div>
                 <div class="my-2 col-md-2 col-3" style="color: #fff;">
-                  <SvelteTooltip tip="React - A JavaScript library for building user interfaces" top color="#000">
-                  <a
-                    href="https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=adpsvelte-index-page"
-                    target="_blank"
-                    class="el-tooltip"
-                    aria-describedby="el-tooltip-1940"
-                    tabindex="0">
-                    <img
-                      alt=""
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
-                      class="img-fluid rounded-circle" />
-                  </a>
+                  <SvelteTooltip
+                    tip="Angular - One framework, Mobile"
+                    top
+                    color="#000">
+                    <a
+                      href="https://www.creative-tim.com/product/argon-dashboard-pro-angular?ref=adpsvelte-index-page"
+                      target="_blank"
+                      class="el-tooltip"
+                      aria-describedby="el-tooltip-1520"
+                      tabindex="0">
+                      <img
+                        alt=""
+                        src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
+                        class="img-fluid rounded-circle" />
+                    </a>
+                  </SvelteTooltip>
+                </div>
+                <div class="my-2 col-md-2 col-3" style="color: #fff;">
+                  <SvelteTooltip
+                    tip="React - A JavaScript library for building user interfaces"
+                    top
+                    color="#000">
+                    <a
+                      href="https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=adpsvelte-index-page"
+                      target="_blank"
+                      class="el-tooltip"
+                      aria-describedby="el-tooltip-1940"
+                      tabindex="0">
+                      <img
+                        alt=""
+                        src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
+                        class="img-fluid rounded-circle" />
+                    </a>
                   </SvelteTooltip>
                 </div>
               </div>

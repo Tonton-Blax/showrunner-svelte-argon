@@ -24,5 +24,5 @@ export async function getToken() {
     const payload = await response.json();
     const { token } = payload;
     console.log(token);
-    this.$user.token = token;
+    user.token = token;
 }

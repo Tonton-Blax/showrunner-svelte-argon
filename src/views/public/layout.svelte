@@ -12,18 +12,32 @@
 
   import { Route } from "svelte-router-spa";
 
+  import { encore } from "../../stores/encore";
 
-  import { onMount } from "svelte";
+  let current;
 
-  import {user, userId, token, getToken, getUserInfo} from "../../stores/auth";
-  onMount(function() {  
+  console.log(_showrunner.env.isProd);
 
-  if($userId == null ) {
+  import {
+    user,
+    userId,
+    token,
+    getToken,
+    getUserInfo,
+  } from "../../stores/auth";
+
+  current = $encore.conferences
+    .GetCurrentByEvent({ EventID: 1 })
+    .then((res) => {
+      console.log("then:", res);
+    })
+    .catch((err) => {
+      console.log("catch", err);
+    });
+
+  if ($userId == null) {
     getUserInfo($user);
   }
-
-});
-
 
   updateBackground();
 
@@ -111,7 +125,7 @@
       <div class="row">
         <div class="col-6 collapse-brand">
           <a href="/">
-            <img src="../img/brand/red.png" alt="image" />
+            <img src="../img/brand/red.png" alt="background image" />
           </a>
         </div>
         <div class="col-6 collapse-close">
@@ -128,30 +142,16 @@
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a href="/dashboard" class="nav-link">
-          Dashboard
-        </a>
+        <a href="/dashboard" class="nav-link"> Dashboard </a>
       </li>
       <li class="nav-item">
-        <a href="/pricing" class="nav-link">
-          Pricing
-        </a>
+        <a href="/pricing" class="nav-link"> Pricing </a>
       </li>
+      <li class="nav-item"><a href="/login" class="nav-link"> Login </a></li>
       <li class="nav-item">
-        <a href="/login" class="nav-link">
-          Login
-        </a>
+        <a href="/register" class="nav-link"> Register </a>
       </li>
-      <li class="nav-item">
-        <a href="/register" class="nav-link">
-          Register
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="/lock" class="nav-link">
-          Lock
-        </a>
-      </li>
+      <li class="nav-item"><a href="/lock" class="nav-link"> Lock </a></li>
     </ul>
     <hr class="d-lg-none" />
 
@@ -228,7 +228,8 @@
       <div class="row align-items-center justify-content-xl-between">
         <div class="col-xl-6">
           <div class="copyright text-center text-xl-left text-muted">
-            © {year}
+            ©
+            {year}
             <a
               href="https://www.creative-tim.com"
               class="font-weight-bold ml-1"

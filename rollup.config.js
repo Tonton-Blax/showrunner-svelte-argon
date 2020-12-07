@@ -4,6 +4,9 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import autoPreprocess from 'svelte-preprocess';
+import { config } from 'dotenv';
+import replace from '@rollup/plugin-replace';
+import typescript from '@rollup/plugin-typescript';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -16,6 +19,15 @@ export default {
         file: 'public/build/bundle.js'
     },
     plugins: [
+        replace({
+            // stringify the object       
+            _showrunner: JSON.stringify({
+                env: {
+                    isProd: production,
+                    ...config().parsed // attached the .env config
+                }
+            }),
+        }),
         svelte({
             // enable run-time checks when not in production
             dev: !production,
@@ -26,6 +38,7 @@ export default {
             },
             preprocess: autoPreprocess()
         }),
+        typescript({ sourceMap: !production }),
 
         // If you have external dependencies installed from
         // npm, you'll most likely need these plugins. In
