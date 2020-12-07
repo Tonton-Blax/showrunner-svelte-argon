@@ -35,10 +35,7 @@
       console.log("catch", err);
     });
 
-  if ($userId == null) {
-    getUserInfo($user);
-  }
-
+  $: console.log($user);
   updateBackground();
 
   if (window.innerWidth > 992) {
